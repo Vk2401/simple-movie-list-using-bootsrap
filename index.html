@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie List - Bootstrap</title>
+    <title>Movie Time - Home</title>
 
     <!-- bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -12,6 +12,52 @@
         a{
           text-decoration: none;
         }
+        .carousel-caption {
+      z-index: 10;
+    top: 33%;
+}
+.carousel-item {
+    position: relative;
+}
+.carousel-item img {
+    z-index: -2;
+}
+
+.background-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.726);
+}
+
+@media(max-width:1180px) {
+  .carousel-caption h5 {
+    font-size: 2.5rem !important;
+	margin-bottom:15px !important;
+  }
+  .carousel-caption p {
+    font-size: 1.5rem !important;
+	margin-bottom:20px !important;
+  }
+  .carousel-caption {
+    top:25%;
+    }
+}
+@media(max-width:980px) {
+	.carousel-caption {
+    top: 20%;
+    }
+  .carousel-caption h5 {
+    font-size: 1.5rem !important;
+  }
+   .carousel-caption p {
+    font-size: 1rem !important;
+  }
+
+}
         
       </style>
 </head>
@@ -29,8 +75,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Home</a>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./action.html">Action</a>
@@ -48,14 +94,25 @@
 
     <!-- main -->
     <main class="bg-secondary">
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+        
+
+        <div class="carousel-inner">
+          <div class="carousel-item active"> <img src="https://media.gq-magazine.co.uk/photos/6142067ccc8e1c7d17ac4ec1/16:9/w_3200,h_1800,c_limit/LA-CASA-DE-PAPEL_S01_EP02_0027.jpg" class="d-block w-100" alt="...">
+            <div class="background-overlay"></div>
+            <div class="carousel-caption">
+              <h1 class="display-4 h4-md mb-4 font-weight-1500">For You</h1>
+              <p class="h4 mb-5 pb-3 text-white-20">Have you ever noticed how movies can teach us some of life's most valuable lessons?,watch some good one's!!.</p>
+             </div>
+             
+          </div>
+   
+        </div>
+       </div>
         <div class="container py-5 ">
-            <h1 class="text-light">
-                For You
-            </h1>
-
-            <p class="mb-5 text-light">Have you ever noticed how movies can teach us some of life's most valuable lessons?,watch some good one's!!</p>
+          <h1 class="text-light text-center mb-5">Enjoy</h1>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-
+              
               <a href="https://www.imdb.com/title/tt6468322/" target="_blank">
                 <div class="col mb-4">
                   <div class="card">
@@ -184,7 +241,7 @@
         </div>
         <!-- /.container -->
     </main>
-    <footer class="text-center text-bg-dark">Made with ❤️</footer>
+    <footer class="text-center text-bg-dark">Made with ❤️ - <a href="https://github.com/Vk2401">vasanthkumar s</a></footer>
     <!-- bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
